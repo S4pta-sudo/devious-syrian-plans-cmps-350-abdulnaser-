@@ -1,10 +1,284 @@
 <!DOCTYPE html>
 
 <html>
+    <head>
+        <title>stuck at b04</title>
+
+    </head>
 <body>
 
 <h1>My First Heading</h1>
-<p>My first paragraph.</p>
+<p>My first <a href = 'https://www.mangatown.com/manga/liar_game/'>death</a>.</p>
+
+<button class = "send_help">
+    subscribe
+</button>
+
+<button class = 'dio'>
+    KONODIODA
+</button>
+
+<button class = "sancho">
+    DON QUOXOTE
+
+</button>
+<p></p>
+<a href="https://www.youtube.com/watch?v=G3e-cpL7ofc">back to amazon</a>
+
+<h1>nike black running shoes</h1>
+
+<h4>$39 - in stock</h4>
+<p>free delivery tomorrow</p>
+<button class = 'add'>add to cart</button>
+<button class = 'buy'>buy now</button>
+
+
+
+<style>
+
+.add{
+    background-color: rgb(232, 151, 13);
+    border: none;
+    width: 90px;
+    height: 30px;
+    border-radius: 17px;
+    transition: opacity 0.15s;
+    cursor: progress;
+}
+.add:hover{
+    opacity: 0.7;
+
+}
+.add:active{
+    opacity: 0.3;
+}
+
+.buy{
+    background-color: rgb(228, 232, 13);
+    border: none;
+    width: 90px;
+    height: 30px;
+    border-radius: 17px;
+    transition: opacity 0.15s;
+    cursor: progress;
+}
+.buy:hover{
+    opacity: 0.7;
+
+}
+.buy:active{
+    opacity: 0.3;
+}
+
+
+.send_help{   /*the css selector, decides whats being styled*/
+    background-color: rgb(200, 0, 0);  /*this is css property and value pair kinda like key and value ends in ;*/
+    color: white;
+    border : none;
+    height: 36px;
+    width: 105px;
+    border-radius: 2px;
+    cursor: pointer;
+    margin-right: 205px;
+    transition: background-color 1s;
+    
+}
+h4{
+    color: green;
+}
+
+
+.dio{
+    background-color: rgb(246, 156, 11);
+    border: none;
+    width: 140px;
+    border-radius: 65px;
+    height: 35px;
+
+
+}
+.dio:hover{
+    background-color: rgb(241, 154, 15);
+
+}
+
+.send_help:hover{
+    background-color: aqua;
+}
+
+.sancho{
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    width: 100px;
+    height: 50px;
+    transition: opacity 0.15s;
+}
+.sancho:hover{
+    opacity: 0.7;
+}
+.sancho:active{
+    opacity: 0.3;
+}
+</style>
+
 
 </body>
 </html>
+
+<!-- 
+ css so far:
+ 
+ * css comes with this thing called a selector which is what is being styled at the moment
+ its a while rabbit hole on its own :P
+
+* you could style entire html elements with every instance
+
+*you can style based on certain attributes of HTML elements, classes, IDs, etc
+
+* you could style also based on the state of what you are styling (hover, clicked, etc.)
+
+* now the methods are a whole css file or a <style> </style> tag in an html file
+
+* the syntax for styling anything is:
+
+    * <things name>:<state>{
+        css property: css property value;
+        css property: css proeprty value;
+        .
+        .
+        .
+        }
+
+
+CSS box model:
+
+        how much space an element takes up (padding)
+
+        how far away is it from other elements (margins)
+
+
+* achieve specific things in css:
+
+        smooth transitions based on state (from untocuhed to hovering to clicked)
+
+            use the transition property which takes the change itself and how much time it takes
+
+            must have the change be there with respect to the state as well
+
+            u could also stack multiple transitions by spearating by commans and ending the transitions with
+            a semi colo
+
+            transition should be in the selector of the item as awhole since it applies during and after the event
+    
+        shadows in css:
+
+            we would use the box-shadow property, takes 4 property values, the x offset, the y offsent, the blur
+            and the color of the shadow
+
+            the color would use the rgba(r, g, b, o) with o being the opacity of the shadow
+
+    
+        spacing inside the a button:
+
+            we use the padding selector 
+            
+            we also use the margin for any spacing outside the button (spacing between different elements)
+
+            we use dev consoles to visualize this for different HTML elements
+
+        aligning buttons:
+
+            this acc depends on the alignment of the text itself, the alignment property
+            aligns the buttons wherever they are needed on the website so them alongside the concepts
+            of padding, margins, and borders makeup the css box model
+
+            the concept of margins exists within text too
+        special symbols in html:
+
+            similar to how in python getting the super and subscripts requires special combinations
+            of characters, so too do the these things in HTML, check marks, middle dots etc.
+            they are called HTML entites
+
+            this does include the > and < symbols
+        
+        margins are to be utilized whenever we want a specific number of spaces between text
+
+
+inheritance in css: (css specificty)
+
+        the highest level would be the html entity itself, so if i style the <p> then all instances
+        of the <p> would have these and inherit them, from there classes come    
+
+        tho whoever gets presidence is the class, so the <p> is whats taken initially
+        and then if the class is given a value then it overrides the <p>
+
+        tldr priority: the most specific selector takes priority, so generaal selector < class < ID
+
+
+text elements: (HTML)
+    
+    think of it as putting an element within the text of another usually, so lets say
+    <p>i 
+        am the <strong>STORM</strong> that is approaching
+    </p>
+
+    now storm here is a text element called strong which just makes the text bold cool?
+
+    so the principle in the simplest of terms is wanting a specific part of text within an element
+    to be modified without affecting the whole thing
+
+    the best and most plain tag is the <span> tag
+
+    do keep in mind that these guys are treated like any other  HTML element that we can screw with
+    in regards to html
+
+
+moving on, the structure of an HTML page:
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+
+    </head>
+
+    <body>
+
+    </body>
+</html>
+
+    * now the doctype just tells the browser what html version to use to render the page and allat
+
+    * the <html> tag houses all the html elements within it, kinda like wrapping paper
+
+    * we are allowed to nest elements if need be
+
+    * the head and body are singletons
+
+    * the body contains everything that the page has to display
+
+    * the head on the other hand manipulates alot of the unseen elements or the undisplayable ones
+    if that makes sense like the title and shit
+
+
+
+
+now to avoid the problem of interlanguage communication we can separate the html from the css
+using the <link> element:
+    
+    * the link element is essentially a void element, an element that doesnt need a closing tag
+
+    * these guys do take html attributes but they wont have text outside the tag
+
+    * link takes 2:
+        rel = "type", type is essentially what are we linking? a stylesheet? a script? etc. etc
+
+        href = "path to file", the path on my machine where the css file being linked is
+    
+    * mind u, this ends up just loading the css content into the html that we have implicitely
+
+    * 
+-->
+
+
