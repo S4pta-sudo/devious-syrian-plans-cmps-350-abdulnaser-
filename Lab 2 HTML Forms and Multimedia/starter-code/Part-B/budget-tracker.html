@@ -9,6 +9,7 @@
     <header>
         <h1>Budget Tracker</h1>
         <p>Log your income and expenses</p>
+        
     </header>
 
     <nav>
@@ -17,8 +18,86 @@
         <a href="goal-planner.html">Goal Planner</a> |
         <a href="account-application.html">New Account</a>
     </nav>
-
+    <h2>Add Transaction</h2>
     <main>
+      <form>
+         <fieldset>
+            <legend>Transaction type</legend>
+            <input type="radio" name="tranny" id="income" value="Income">
+            <label for="tranny">Income</label>
+            <input type="radio" name="tranny" id="expense" value="Expense">
+            <label for="tranny">Expense</label>
+         </fieldset>
+         
+         <div>
+
+            <label for="catagory">catagory *</label>
+            
+            <select id="catagory" name="category" required aria-required="true">
+
+               <optgroup label="income Categories">
+                  <option value="null">--choose catagory--</option>
+                  <option value="salary">salary</option>
+                  <option value="freelance">freelance</option>
+                  <option value="investment">investment</option>
+                  <option value="other-income">other-income</option>
+               </optgroup>
+
+               <optgroup label="expense categories">
+                  <option value="food">food</option>
+                  <option value="transport">transport</option>
+                  <option value="entertainment">entertainment</option>
+                  <option value="utilities">utilities</option>
+                  <option value="healthcare">healthcare</option>
+                  <option value="shopping">shopping</option>
+                  <option value="education">education</option>
+                  <option value="other-expense">other-expense</option>
+            
+               </optgroup>
+
+
+            </select>
+            <label for="amount">Amount (QAR)*</label>
+            <input required min="0" step="0.01" aria-describedby="amount-help" name="amount">
+            <label>Enter amount in Qatari Riyals</label>
+            <label for="date">Transaction Date *</label>
+            <input type="date" required max="2026-12-31" placeholder="02/01/2026">
+            <label for="desc"> Description</label>
+            <input type="text" id="desc" maxlength="100" required placeholder="SEND_HELP">
+            <label for="account">Account *</label>
+            <select id="account" aria-placeholder="--selection account--">
+               <option value="nothing">--selection account--</option>
+               <option value="primary checking">primary checking</option>
+               <option value="emergency fund">emergency fund</option>
+               <option value="stock portfolio">stock portfolio</option>
+
+               
+            </select>
+            
+           <fieldset>
+            <legend>Payment method</legend>
+            <input type="radio" name="meth" id = 'op1'>
+            <label for="op1">cash</label>
+            <input type="radio" name="meth" id = 'op2'>
+            <label for="op2">Debit/credit</label>
+            <input type="radio" name="meth" id = 'op3'>
+            <label for="op3">bank transfer</label>
+           </fieldset>
+           <br>
+           <br>
+           <br>
+           <label for="opinion">Tags (optional)</label>
+           <input type="text" placeholder="e.g vacation, cat, gift" id="opinion">
+           <label>Separate multiple tags with commas</label>
+           <input type="checkbox" name="check" id="check">
+           <label for="check">this is a recurring transaction additional notes (optional)</label>
+           <textarea placeholder="any additional information about this transaction..."></textarea>
+           <input type="submit" placeholder="add transaction">
+           <input type="reset" placeholder="clear form">
+         </div>
+         </div>
+
+      </form>
         <!-- TODO: Create a form with action="/api/transactions" method="POST" -->
         <!-- Form heading: Add Transaction -->
 

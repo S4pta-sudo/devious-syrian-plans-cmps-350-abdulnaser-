@@ -16,8 +16,57 @@
         <!-- Create a form (action="/submit", method="POST") with:
              - name (text), email, phone (tel) fields with labels
              - All required, submit + reset buttons -->
+             
         <section>
             <h2>Module 1: Contact Form</h2>
+            <form>
+                <div>
+                <fieldset>
+                <legend>I WANT UR INFO SUCKa</legend>
+                <label for="username"> name</label>
+                <input type="text" name="username" id = 'username' required>
+                </div>
+                <div>
+                
+                <label for="email"> email</label>
+                <input type="email" name="email" id = 'email' required>
+                </div>
+                <div>
+                <label for="telephone"> telephone number</label>
+                <input type="tel" name="telephone" id = 'telephone' required>
+                </div>
+                </fieldset>
+                <div>
+                    <label for="nationality">nationality</label>
+                    <select name="nationality" id="nationality">
+                        <option value="1">syrian</option>
+                        <option value="2">egyptian</option>
+                        <option value="3">sudan</option>
+                        <option value="4">honglu</option>
+                        <option value="5">DON</option>
+                    </select>
+                </div>
+
+                <datalist id="SINNERS">
+
+                    <option value="DON">
+                    <option value="RYOSHU">
+                    <option value="honglu">    
+                    <option value="GREGOR">
+
+                </datalist>
+
+                <input type="text" list="SINNERS" id="SINNERS">
+                
+                <div>
+                <input type="reset" name = 'reset' id = 'id'>
+                <input type="submit" name="sub" id="sub">
+                </div>
+                
+
+
+
+            </form>
 
 
         </section>
@@ -27,7 +76,10 @@
              country dropdown (5 countries), color picker -->
         <section>
             <h2>Module 2: Advanced Inputs</h2>
-
+            <form>
+                <label for="number">number from 18 to 100</label>
+                <input type="text" min="18" max="100">
+            </form>
 
         </section>
 
@@ -55,8 +107,8 @@
              multiple select (5+ options), input with datalist (4+ cities) -->
         <section>
             <h2>Module 6: Advanced Form Elements</h2>
-
-
+            <video src="https://youtu.be/dQw4w9WgXcQ" controls></video>
+          
         </section>
     </main>
 
