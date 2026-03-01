@@ -63,6 +63,25 @@ console.log(t2.isExpense());    // true
 //   getBalance()     - returns formatted string like "15,000 QAR"
 
 // TODO: Define the Account class with constructor and 3 methods
+class Account{
+   constructor(name,type,balance,createdAt){
+      this.name=name; this.type=type; this.balance=balance; 
+      this.createdAt=createdAt;
+   }
+   deposit(input){
+      this.balance+=input;
+
+   }
+   withdraw(input){
+      if (this.balance<0){return "NO U SHALL NOT GET MONEY";}
+      else{
+         this.balance-=input;
+      }
+   }
+   getBalance(){
+      return `${this.balance}`
+   }
+}
 
 
 
@@ -90,14 +109,34 @@ console.log(t2.isExpense());    // true
 
 // TODO: Define the BudgetCategory class
 
+class BudgetCatagory{
+   constructor(name,budget,spent){
+      this.name=name;
+      this.budget=budget;
+      this.spent=spent;
+   }
+   addSpending(input){
+      this.spent+=input;
+   }
+   getRemaining(){
+      return `this.budget`;
+   }
+   isOverBudget(input){
+      const answer = input> this.budget? true:false;
+      return `is ober budget?${answer}`
+   }
+   toString(){
+      return `${this.budget}\n${this.name}\n${this.spent}`
+   }
+}
+   
 
-
-// // Test:
-// const food = new BudgetCategory("Food", 2000);
-// food.addSpending(800);
-// food.addSpending(400);
-// console.log(`${food}`);                    // Food: 1,200 / 2,000 QAR
-// console.log("Over budget?", food.isOverBudget()); // false
-// food.addSpending(1000);
-// console.log(`${food}`);                    // Food: 2,200 / 2,000 QAR
-// console.log("Over budget?", food.isOverBudget()); // true
+// Test:
+const food = new BudgetCategory("Food", 2000);
+food.addSpending(800);
+food.addSpending(400);
+console.log(`${food}`);                    // Food: 1,200 / 2,000 QAR
+console.log("Over budget?", food.isOverBudget()); // false
+food.addSpending(1000);
+console.log(`${food}`);                    // Food: 2,200 / 2,000 QAR
+console.log("Over budget?", food.isOverBudget()); // true
