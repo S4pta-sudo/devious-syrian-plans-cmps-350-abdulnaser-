@@ -2,6 +2,14 @@
    Module 3: Inheritance
    Run with: node js/practice.js
    ================================= */
+//to use classes in different files, u have to 
+//export it from the source and then import them
+
+//to import multiple using module.export = {class1,clas2,class3}
+
+//testfiles are .spec.js files
+
+
 
 // ---- Modules 1-2 (Solved): Classes, Constructors, Methods ----
 

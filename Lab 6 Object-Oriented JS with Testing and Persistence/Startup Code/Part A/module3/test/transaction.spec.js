@@ -23,23 +23,37 @@ describe("Transaction", () => {
     // TODO: Test that constructor sets properties
     it("should set all properties from constructor", () => {
         // Create a transaction and check each property with expect().to.equal()
-
+        t1 = new Transaction("idk1",35,"idk2","idk3");
+        expect(t1.description).to.equal("idk1");
+        expect(t1.amount).to.equal(35);
+        expect(t1.type).to.equal("idk2");
+        expect(t1.category).to.equal("idk3");
     });
 
     // TODO: Test format() for income
     it("should format income with + sign", () => {
         // Create an income transaction and check format() output
-
+        t2 = new Transaction("idk1",35,"income","idk3");
+        const out = t2.format();
+        expect(out).to.equal("+35 QAR");
     });
 
     // TODO: Test format() for expense
     it("should format expense with - sign", () => {
-
+        t2 = new Transaction("idk1",35,"expense","idk3");
+        const out = t2.format();
+        expect(out).to.equal("-35 QAR");
     });
 
     // TODO: Test isExpense() and isIncome()
     it("should correctly identify transaction type", () => {
-
+        t2 = new Transaction("idk1",35,"income","idk3");
+        t3 = new Transaction("idk1",35,"expense","idk3");
+        
+        
+        expect(t3.isExpense()).to.equal(true);
+        
+        expect(t2.isIncome()).to.equal(true);
     });
 });
 
