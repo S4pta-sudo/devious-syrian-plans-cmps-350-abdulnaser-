@@ -81,7 +81,19 @@ class BudgetCategory {
 // logs the profit earned.
 
 // TODO: Define SavingsAccount class
+class SavingsAccount extends Account{
+    constructor(name,balance,profitRate){
+        //we need to use u unless the dad has an emoty constructor
+        super(name,'savings',balance);
+        this.profitRate=profitRate;
+    }
+    applyProfit(){
+        const profit = this.balance*this.profitRate;
+        this.balance+=profit;
+        console.log(`profit earned =${profit.toLocaleString()} QAR`)
+    }
 
+}
 
 
 // Test:
@@ -101,14 +113,24 @@ console.log("After profit:", savings.getBalance());
 
 // TODO: Define RecurringTransaction class
 
+class RecurringTransaction extends Transaction{
+    constructor(description, amount, type, category, frequency){
+        super(description, amount, type, category);
+        this.frequency = frequency;
+    }
+    format(){
+        return super.format() + this.frequency;
+    }
+
+}
 
 
-// Test:
-const salary = new RecurringTransaction("Salary", 8000, "income", "Salary", "monthly");
-const netflix = new RecurringTransaction("Netflix", 45, "expense", "Entertainment", "monthly");
-console.log(salary.format());     // +8,000 QAR (monthly)
-console.log(netflix.format());    // -45 QAR (monthly)
-console.log("Is expense?", netflix.isExpense()); // true (inherited)
+// // Test:
+// const salary = new RecurringTransaction("Salary", 8000, "income", "Salary", "monthly");
+// const netflix = new RecurringTransaction("Netflix", 45, "expense", "Entertainment", "monthly");
+// console.log(salary.format());     // +8,000 QAR (monthly)
+// console.log(netflix.format());    // -45 QAR (monthly)
+// console.log("Is expense?", netflix.isExpense()); // true (inherited)
 
 
 // ---- Exercise 3: instanceof and Type Checking ----
@@ -123,3 +145,10 @@ console.log("Is expense?", netflix.isExpense()); // true (inherited)
 // savings instanceof Account -> true
 // savings instanceof SavingsAccount -> true
 // new Transaction("x", 1, "income", "y") instanceof RecurringTransaction -> false
+
+t1 = new SavingsAccount("idk1",5200,20);
+t2 = new RecurringTransaction("idk2",6500,"idk3","idk4","annually");
+console.log(t1 instanceof SavingsAccount);
+console.log(t2 instanceof Account);
+console.log(t2 instanceof RecurringTransaction);
+console.log(t2 instanceof Transaction);

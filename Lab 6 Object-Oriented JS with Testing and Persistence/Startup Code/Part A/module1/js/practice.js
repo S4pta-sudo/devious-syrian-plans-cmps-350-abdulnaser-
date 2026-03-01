@@ -85,14 +85,14 @@ class Account{
 
 
 
-// // Test:
-// const acc = new Account("Main Checking", "checking", 10000);
-// console.log("Balance:", acc.getBalance());   // 10,000 QAR
-// acc.deposit(5000);                           // Deposited 5,000 QAR
-// console.log("After deposit:", acc.getBalance());
-// acc.withdraw(3000);                          // Withdrew 3,000 QAR
-// console.log("After withdraw:", acc.getBalance());
-// acc.withdraw(50000);                         // Insufficient funds
+// Test:
+const acc = new Account("Main Checking", "checking", 10000);
+console.log("Balance:", acc.getBalance());   // 10,000 QAR
+acc.deposit(5000);                           // Deposited 5,000 QAR
+console.log("After deposit:", acc.getBalance());
+acc.withdraw(3000);                          // Withdrew 3,000 QAR
+console.log("After withdraw:", acc.getBalance());
+acc.withdraw(50000);                         // Insufficient funds
 
 
 // ---- Exercise 3: BudgetCategory with toString ----
@@ -110,7 +110,7 @@ class Account{
 // TODO: Define the BudgetCategory class
 
 class BudgetCatagory{
-   constructor(name,budget,spent){
+   constructor(name,budget,spent=0){
       this.name=name;
       this.budget=budget;
       this.spent=spent;
@@ -119,7 +119,7 @@ class BudgetCatagory{
       this.spent+=input;
    }
    getRemaining(){
-      return `this.budget`;
+      return `${this.budget}-${this.spent}`;
    }
    isOverBudget(input){
       const answer = input> this.budget? true:false;
@@ -132,7 +132,7 @@ class BudgetCatagory{
    
 
 // Test:
-const food = new BudgetCategory("Food", 2000);
+const food = new BudgetCatagory("Food", 2000);
 food.addSpending(800);
 food.addSpending(400);
 console.log(`${food}`);                    // Food: 1,200 / 2,000 QAR
