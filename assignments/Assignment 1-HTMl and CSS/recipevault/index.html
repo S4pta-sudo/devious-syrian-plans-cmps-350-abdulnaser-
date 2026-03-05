@@ -10,16 +10,16 @@
     <!-- Build your RecipeVault home page here -->
     <!-- This page should contain: Header, Nav, Featured Recipes, Meal Plan Table, Cooking Tutorial, Sidebar, Footer -->
     <!-- The recipe submission form goes on share-recipe.html -->
-    <header>
+    <header class="head">
         <h1>RecipeVault</h1>
         <p>your personal recipe collection</p>
         <nav>
-        <a href="http://127.0.0.1:5500/assignments/Assignment%201-HTMl%20and%20CSS/recipevault/index.html"></a><button>recipes</button>
-        <a href="https://excalidraw.com"><button>share recipe</button></a>
+        <a href="http://127.0.0.1:5500/assignments/Assignment%201-HTMl%20and%20CSS/recipevault/index.html">recipes</a>
+        <a href="https://excalidraw.com">share recipe</a>
         </nav>
     </header>
 
-    <aside>
+    <aside class="sidebar">
         <h2>Quick cooking tips</h2>
         <hr>
         <ol>
@@ -39,16 +39,147 @@
         </ul>
     </aside>
     <main>
-        <div>
+        <div class="card container">
           <h1>featured recipes</h1>
             <article>
                 <figure>
-                    <img src="C:\Users\naser\OneDrive\Documents\GitHub\devious-syrian-plans-cmps-350-abdulnaser-\assignments\Assignment 1-HTMl and CSS\screenshots\chicken.png" alt="imagine endomie but better">
+                    <img src="../screenshots/tonkotsu.png" alt="imagine endomie but better" width="400px" height="300px">
+                    <figcaption>that one ramen dish muslims cant eat cuz pig</figcaption>
+                    <h3>tonkotsu ramen</h3>
+                    <p>ramen with a sessame base that involves stock from pig bones
+                        served with meat in the shape of circles which is usually grilled
+                        and ramen noodles, some are ebil and consider udon acc noodles.
+                    </p>
+                    <ul>
+                        <li><strong>prep:1-2 days</strong></li>
+                        <li><strong>cook:40 mins</strong></li>
+                        <li><strong>serves:4</strong></li>
+                    </ul>
                 </figure>
             </article>
+        
+            <article>
+                <figure>
+                    <img src="../screenshots/naruto.png" alt="imagine endomie but better" width="400px" height="300px">
+                    <figcaption>to become naruto, you must eat like naruto</figcaption>
+                    <h3>naruto ramen</h3>
+                    <p>if you are willing to invest some more time and passion
+                        into your noodles, you could upgrade into the naruto ramen
+                        a mix of tonkotsu and shoyou ramen with more toppings to work with
+                        and an overall more tasteful rasengan experience.
+                    </p>
+                    <ul>
+                        <li><strong>prep:1-2 days</strong></li>
+                        <li><strong>cook:60 mins</strong></li>
+                        <li><strong>serves:6</strong></li>
+                    </ul>
+                </figure>
+            </article>
+
+            <article>
+                <figure>
+                    <img src="../screenshots/soba.png" alt="imagine endomie but better" width="400px" height="300px">
+                    <figcaption>to become naruto, you must eat like naruto</figcaption>
+                    <h3>soba noodles</h3>
+                    <p>a lighter and simpler dish overall, utilizing
+                        thinner noodles that can be prepared and eated cold
+                        with a more sour and vinegar base compared to the other 2
+                        having a meat base.
+                    </p>
+                    <ul>
+                        <li><strong>prep:30 mins</strong></li>
+                        <li><strong>cook:20 mins</strong></li>
+                        <li><strong>serves:3</strong></li>
+                    </ul>
+                </figure>
+            </article>
+        </div>
+
+        <div class="table part">
+            <h1>
+                weekly meal plan
+            </h1>
+            <br>
+            <h3>Meal plan for the week -- all calorie values approximate</h3>
+            <table border="1.0">
+                <thead>
+                    <tr>
+                        <td>Day</td>
+                        <td>Breakfast</td>
+                        <td>Lunch</td>
+                        <td>Dinner</td>
+                        <td>Calories</td>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <td>Weekly Average</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>1,826</td>
+                    
+                    </tr>
+                    
+                </tfoot>
+                <tbody>
+                    <tr>
+                        <td>Monday</td>
+                            <td>Breakfast: Tamago Kake Gohan (rice with raw egg & soy sauce)</td>
+                            <td>Lunch: Chicken Teriyaki Bento</td>
+                            <td>Dinner: Yasai Tempura with Miso Soup</td>
+                            <td>Calories: 1,850</td>
+                    </tr>
+                    <tr>
+                            <td>Tuesday</td>
+                            <td>Breakfast: Onigiri (salmon filling)</td>
+                            <td>Lunch: Tonkatsu with shredded cabbage</td>
+                            <td>Dinner: Grilled Mackerel (Saba Shioyaki)</td>
+                            <td>Calories: 1,780</td>
+                    </tr>
+                    <tr>
+                        <td>Wednesday</td>
+                        <td>Breakfast: Miso Soup with Tofu & Rice</td>
+                        <td>Lunch: Ramen (Shoyu style)</td>
+                        <td>Dinner: Nikujaga (beef & potato stew)</td>
+                        <td>Calories: 1,900</td>
+                    </tr>
+                    <tr>
+                        <td>Thursday</td>
+                        <td>Breakfast: Matcha Yogurt with Red Bean</td>
+                        <td>Lunch: Sushi Rolls (Cucumber & Tuna)</td>
+                        <td>Dinner: Meal Prep Day – Leftover Nikujaga</td>
+                        <td>Calories: 1,650</td>
+                    </tr>
+                    <tr>
+                        <td>Friday</td>
+                        <td>Breakfast: Japanese Soufflé Pancakes</td>
+                        <td>Lunch: Yakisoba</td>
+                        <td>Dinner: Chicken Karaage with Steamed Rice</td>
+                        <td>Calories: 1,950</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="video part">
+            <h1>Cooking tutorials</h1>
+            <figure>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/r3_tcQiyGG8?si=sSYkc-oJJ7T_vDf0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>   
+            </iframe>
+            <figcaption>a quick simple video as an intro to the way of ramen</figcaption>
+        </figure>
         </div>
 
     </main>
 
 </body>
+
+<footer>
+    <strong>&copy all rights reserved to the <del>syrian japanese regime</del></strong>
+    <strong>built with chopsticks, wet noodles, and dua on the creator of javascript #piracy</strong>
+    <br>
+    <a href="http://127.0.0.1:5500/assignments/Assignment%201-HTMl%20and%20CSS/recipevault/index.html">recipes</a>
+    <a href="https://excalidraw.com">share recipe</a>
+</footer>
 </html>
