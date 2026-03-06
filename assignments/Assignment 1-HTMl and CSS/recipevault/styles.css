@@ -30,7 +30,19 @@
 
 /* ===== Reset & Base Styles ===== */
 /* TODO: Add box-sizing reset, body font, base img and link styles */
+header{
+   background-color:#e65100;
+   color: white;
+   margin: 0;
+   padding: 0;
+   line-height: 1;
+   align-items: center;
+   
+}
 
+* {
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
 
 /* ===== Typography ===== */
 /* TODO: Style h1, h2, h3 headings */

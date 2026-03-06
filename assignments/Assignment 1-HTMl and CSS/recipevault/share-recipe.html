@@ -10,15 +10,19 @@
     <!-- Build your recipe submission form page here -->
     <!-- This page should contain: Header, Nav, Submit Recipe Form, Footer -->
     <!-- Use the same header/nav/footer as index.html for consistent navigation -->
-    <header>
+    <header class="head">
         <h1>RecipeVault</h1>
         <p>your personal recipe collection</p>
+        <nav>
+        <a href="http://127.0.0.1:5500/assignments/Assignment%201-HTMl%20and%20CSS/recipevault/index.html" target="_blank">recipes</a>
+        <a href="share-recipe.html" target="_blank">share recipe</a>
+        </nav>
     </header>
 
     
         <h1>share a recipe</h1>
         <form>
-            <fieldset>
+            <fieldset class="recipe_information">
                 <legend>recipe information</legend>
                 <label for="recipe_name">Recipe Name*</label><br><input type="text" name="recipe_name" id="recipe_name" placeholder="e.g chapati chicken chili" required aria-required="true"><br>
                 <label for="description">description*</label><br><input type="text" name="description" id="description" required placeholder="why are u reading this?"><br>
@@ -52,7 +56,7 @@
                 <label>recipe photo</label><br><input type="file">
             </fieldset>
             
-            <fieldset>
+            <fieldset class="details">
                 <legend>details</legend>
                 <label><strong>Difficulty level</strong></label><br>
                 <input type="radio" value="easy" name="radio" id="radio">
@@ -73,13 +77,13 @@
                 <br>
                 <label for="area">ingredients*</label>
                 <p>list one ingredient per line</p>
-                <textarea placeholder="eg. soba noodles"></textarea>
+                <textarea placeholder="eg. soba noodles" required aria-describedby="help"></textarea>
 
             </fieldset>
             <input type="submit" value="submit recipe">
             <input type="reset" value="clear form">
         </form>
-        <footer>
+        <footer class="feet">
             <strong>&copy all rights reserved to the <del>syrian japanese regime</del></strong>
             <strong>built with chopsticks, wet noodles, and dua on the creator of javascript #piracy</strong>
             <br>
