@@ -10,6 +10,83 @@
     <!-- Build your recipe submission form page here -->
     <!-- This page should contain: Header, Nav, Submit Recipe Form, Footer -->
     <!-- Use the same header/nav/footer as index.html for consistent navigation -->
+    <header>
+        <h1>RecipeVault</h1>
+        <p>your personal recipe collection</p>
+    </header>
 
+    
+        <h1>share a recipe</h1>
+        <form>
+            <fieldset>
+                <legend>recipe information</legend>
+                <label for="recipe_name">Recipe Name*</label><br><input type="text" name="recipe_name" id="recipe_name" placeholder="e.g chapati chicken chili" required aria-required="true"><br>
+                <label for="description">description*</label><br><input type="text" name="description" id="description" required placeholder="why are u reading this?"><br>
+                <label for="category">category</label><br>
+                <select>
+                    <optgroup label="--select category--"></optgroup>
+                    <optgroup label="main">
+                        <option value="lunch">lunch</option>
+                        <option value="dinner">dinner</option>
+                        <option value="dessert">dessert</option>
+                    </optgroup>
+                    <optgroup label="side">
+                        <option value="snacks">snacks</option>
+                        <option value="arabic">arabic</option>
+                        <option value="other">other</option>
+                    </optgroup>
+                </select><br>
+                <datalist id="list">
+                    <option>zoool</option>
+                    <option>sooory</option>
+                    <option>lebnanyyyy</option>
+                    <option>yabany</option>
+                </datalist>
+                <label for="list">Cuisine</label><br>
+                <input list="list" type="text" id="list" placeholder="type or select a cuisine"><br>
+            
+                <label for="">prep time</label><br> <input type="number" max="60" min="1" step="1"><br>
+                <label for="">cook time</label><br> <input type="number" max="60" min="1" step="1"><br>
+                <label for="">servings</label><br> <input type="number" max="60" min="1" step="1"><br>
+                <label for="date">Date</label><input type="date"><br>
+                <label>recipe photo</label><br><input type="file">
+            </fieldset>
+            
+            <fieldset>
+                <legend>details</legend>
+                <label><strong>Difficulty level</strong></label><br>
+                <input type="radio" value="easy" name="radio" id="radio">
+                <label for="radio">easy</label>
+                <input type="radio" id="radio2" name="radio" value="medium">
+                <label for="radio2">medium</label>
+                <input type="radio" name="radio" id="radio3" value="hard">
+                <label for="radio3">hard</label><br>
+                <label>Dietary Tags:</label><br><p>(selet all that apply)</p><br>
+                <label for="checkbox">Vegetarian</label>
+                <input type="checkbox" id="checkbox" name="checkbox">
+                <label for="checkbox2">Vegan</label>
+                <input type="checkbox" id="checkbox2" name="checkbox">
+                <label for="checkbox3">Gluten-free</label>
+                <input type="checkbox" id="checkbox3" name="checkbox">
+                <label for="checkbox4">Dairy-free</label>
+                <input type="checkbox" id="checkbox4" name="checkbox">
+                <br>
+                <label for="area">ingredients*</label>
+                <p>list one ingredient per line</p>
+                <textarea placeholder="eg. soba noodles"></textarea>
+
+            </fieldset>
+            <input type="submit" value="submit recipe">
+            <input type="reset" value="clear form">
+        </form>
+        <footer>
+            <strong>&copy all rights reserved to the <del>syrian japanese regime</del></strong>
+            <strong>built with chopsticks, wet noodles, and dua on the creator of javascript #piracy</strong>
+            <br>
+            <a target="_blank" href="http://127.0.0.1:5500/assignments/Assignment%201-HTMl%20and%20CSS/recipevault/index.html">recipes</a>
+            <a target="_blank" href="https://excalidraw.com">share recipe</a>
+        </footer>
 </body>
+
+
 </html>
