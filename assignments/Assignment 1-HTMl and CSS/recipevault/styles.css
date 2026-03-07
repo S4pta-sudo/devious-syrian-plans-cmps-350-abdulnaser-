@@ -139,6 +139,12 @@ article { /*each card item what to do with it*/
    
 }
 
+article:hover{
+   box-shadow: #333333;
+   border-style: dashed;
+   
+}
+
 article img{ /*the images within each card*/
    border-radius: 3%;
    
