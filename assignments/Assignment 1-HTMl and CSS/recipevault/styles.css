@@ -331,85 +331,92 @@ textarea{
 
 
 
-@media (max-width:767px){ /*PHONEEEEEEEE*/
 
-/* header stack */
-.head{
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
+/*PHONEEEEEEEE*/
+@media (max-width:767px){
 
-.head_buttons{
-    display:flex;
-    flex-direction: column;
-    width:100%;
-}
-
-.head_buttons button{
-    width:100%;
-}
-
-/* main layout */
-main{
-    grid-template-columns: 1fr;
-    margin-left:20px;
-    margin-right:20px;
-}
-
-/* cards */
-.card_container{
-    flex-direction: column;
-    align-items:center;
-}
-
-article{
-    width:100%;
-}
-
-.card_bg{
-    width:100%;
-}
-
-article figcaption{
-    width:100%;
-}
-
-article img{
-    width:100%;
-    height:auto;
-}
-
-/* sidebar below content */
-aside{
-    width:100%;
-    margin-top:40px;
-}
-
-/* table scroll */
-.table{
-    overflow-x:auto;
-}
-
-/* video responsive */
-.video_part iframe{
-    width:100%;
-    height:300px;
-}
-
-/* form */
-form{
-    width:100%;
-    margin-left:0;
-}
+   /* header stacked */
+   .head{
+       flex-direction: column;
+       align-items: center;
+       text-align: center;
+   }
    
-/* number inputs stacked */
-.number_input_container{
-    flex-direction:column;
-}
-
-}
-
+   .head_buttons{
+       display:flex;
+       flex-direction: column;
+       width:100%;
+   }
+   
+   .head_buttons button{
+       width:100%;
+   }
+   
+   /* main layout */
+   main{
+       grid-template-columns: 1fr;
+       margin-left:20px;
+       margin-right:20px;
+   }
+   
+   /* cards fix */
+   .card_container{
+       flex-direction: column;
+       align-items:center;
+       gap:25px;
+   }
+   
+   article{
+       width:100%;
+       height:auto;
+   }
+   
+   /* fix image overlap */
+   article img{
+       width:100%;
+       height:auto;
+       display:block;
+   }
+   
+   /* fix background width */
+   .card_bg{
+       width:100%;
+   }
+   
+   /* caption fix */
+   article figcaption{
+       width:100%;
+   }
+   
+   /* sidebar below */
+   aside{
+       width:100%;
+       margin-top:40px;
+   }
+   
+   /* table scroll */
+   .table{
+       overflow-x:auto;
+   }
+   
+   /* responsive video */
+   .video_part iframe{
+       width:100%;
+       height:300px;
+   }
+   
+   /* form width */
+   form{
+       width:100%;
+       margin-left:0;
+   }
+   
+   /* stack number inputs */
+   .number_input_container{
+       flex-direction:column;
+   }
+   
+   }
 
 
 /*TABLETTTTTTTTT*/
