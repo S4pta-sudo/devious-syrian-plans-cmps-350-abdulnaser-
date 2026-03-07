@@ -11,89 +11,87 @@
     <!-- This page should contain: Header, Nav, Featured Recipes, Meal Plan Table, Cooking Tutorial, Sidebar, Footer -->
     <!-- The recipe submission form goes on share-recipe.html -->
     <header class="head">
+        <div>
         <h1>RecipeVault</h1>
         <p>your personal recipe collection</p>
-        <nav>
-        <a href="http://127.0.0.1:5500/assignments/Assignment%201-HTMl%20and%20CSS/recipevault/index.html" target="_blank">recipes</a>
-        <a href="share-recipe.html" target="_blank">share recipe</a>
+        </div>
+        <nav class="head_buttons">
+        <button><a href="http://127.0.0.1:5500/assignments/Assignment%201-HTMl%20and%20CSS/recipevault/index.html" target="_blank">recipes</a></button>
+        <button><a href="share-recipe.html" target="_blank">share recipe</a></button>
         </nav>
     </header>
 
-    <aside class="sidebar">
-        <h2>Quick cooking tips</h2>
-        <hr>
-        <ol>
-            <li><strong>read the full recipe</strong> before you start cooking</li>
-            <li><em>prep all ingredients</em>(mise en place) before turning on the stove</li>
-            <li>season as you go and taste frequently</li>
-            <li>let meat <strong>rest</strong> afetr cooking for jucier results</li>
-            <li>Use a <mark>sharp knife</mark>, it is safer and more efficient</li>
-        </ol>
-
-        <h3>useful resources</h3>
-        <ul>
-            <li><a rel="noopener noreferrer" target="_blank" href="https://www.fatafeat.com">all recipes</a></li>
-            <li><a rel="noopener noreferrer" target="_blank" href="https://www.fatafeat.com">BBC good Foods</a></li>
-            <li> <a href="mailto:ar2211579@qu.edu.qa">Email use a recipe</a></li>
-            <li><a href="tel:11223355">call us: +974 1122553366</a></li>
-        </ul>
-    </aside>
+    <h1 style="margin-left:200px ; color: #e65100;">featured recipes</h1>
     <main>
-        <div class="card container">
-          <h1>featured recipes</h1>
+        
+        
+        <div class="card_container">
+            
             <article>
                 <figure>
                     <img src="../screenshots/tonkotsu.png" alt="imagine endomie but better" width="400px" height="300px">
+                    <div class="card_bg">
                     <figcaption>that one ramen dish muslims cant eat cuz pig</figcaption>
-                    <h3>tonkotsu ramen</h3>
+                    
+                    <h3> <strong> tonkotsu ramen</strong></h3>
                     <p>ramen with a sessame base that involves stock from pig bones
                         served with meat in the shape of circles which is usually grilled
                         and ramen noodles, some are ebil and consider udon acc noodles.
                     </p>
+                    <hr>
                     <ul>
                         <li><strong>prep:1-2 days</strong></li>
                         <li><strong>cook:40 mins</strong></li>
                         <li><strong>serves:4</strong></li>
                     </ul>
+                </div>
                 </figure>
             </article>
         
             <article>
                 <figure>
                     <img src="../screenshots/naruto.png" alt="imagine endomie but better" width="400px" height="300px">
+                    <div class="card_bg">
                     <figcaption>to become naruto, you must eat like naruto</figcaption>
-                    <h3>naruto ramen</h3>
-                    <p>if you are willing to invest some more time and passion
+                    
+                    <h3> <strong> naruto ramen </strong></h3>
+                    <p>more time and passion
                         into your noodles, you could upgrade into the naruto ramen
                         a mix of tonkotsu and shoyou ramen with more toppings to work with
                         and an overall more tasteful rasengan experience.
                     </p>
+                    <hr>
                     <ul>
                         <li><strong>prep:1-2 days</strong></li>
                         <li><strong>cook:60 mins</strong></li>
                         <li><strong>serves:6</strong></li>
                     </ul>
+                    </div>
                 </figure>
             </article>
 
             <article>
                 <figure>
                     <img src="../screenshots/soba.png" alt="imagine endomie but better" width="400px" height="300px">
-                    <figcaption>to become naruto, you must eat like naruto</figcaption>
-                    <h3>soba noodles</h3>
+                    <div class="card_bg">
+                    <figcaption>the black sheep of noodles</figcaption>
+                    
+                    <h3> <strong> soba noodles </strong></h3>
                     <p>a lighter and simpler dish overall, utilizing
                         thinner noodles that can be prepared and eated cold
                         with a more sour and vinegar base compared to the other 2
-                        having a meat base.
+                        having a meat base with soy sauce being optional.
                     </p>
+                    <hr>
                     <ul>
                         <li><strong>prep:30 mins</strong></li>
                         <li><strong>cook:20 mins</strong></li>
                         <li><strong>serves:3</strong></li>
                     </ul>
+                </div>
                 </figure>
             </article>
-        </div>
+        
 
         <div class="table">
             <h1>
@@ -101,19 +99,19 @@
             </h1>
             <br>
             <h3>Meal plan for the week -- all calorie values approximate</h3>
-            <table border="1.0">
+            <table border="0">
                 <thead>
                     <tr>
-                        <td>Day</td>
-                        <td>Breakfast</td>
-                        <td>Lunch</td>
-                        <td>Dinner</td>
-                        <td>Calories</td>
+                        <td><strong>Day</strong></td>
+                        <td><strong>Breakfast</strong></td>
+                        <td><strong>Lunch</strong></td>
+                        <td><strong>Dinner</strong></td>
+                        <td><strong>Calories</strong></td>
                     </tr>
                 </thead>
                 <tfoot>
                     <tr>
-                        <td>Weekly Average</td>
+                        <td> <strong> Weekly Average </strong></td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -124,35 +122,35 @@
                 </tfoot>
                 <tbody>
                     <tr>
-                        <td>Monday</td>
+                        <td> <strong> Monday</strong></td>
                             <td>Breakfast: Tamago Kake Gohan (rice with raw egg & soy sauce)</td>
                             <td>Lunch: Chicken Teriyaki Bento</td>
                             <td>Dinner: Yasai Tempura with Miso Soup</td>
                             <td>Calories: 1,850</td>
                     </tr>
                     <tr>
-                            <td>Tuesday</td>
+                            <td> <strong> Tuesday </strong></td>
                             <td>Breakfast: Onigiri (salmon filling)</td>
                             <td>Lunch: Tonkatsu with shredded cabbage</td>
                             <td>Dinner: Grilled Mackerel (Saba Shioyaki)</td>
                             <td>Calories: 1,780</td>
                     </tr>
                     <tr>
-                        <td>Wednesday</td>
+                        <td> <strong> Wednesday</strong></td>
                         <td>Breakfast: Miso Soup with Tofu & Rice</td>
                         <td>Lunch: Ramen (Shoyu style)</td>
                         <td>Dinner: Nikujaga (beef & potato stew)</td>
                         <td>Calories: 1,900</td>
                     </tr>
                     <tr>
-                        <td>Thursday</td>
+                        <td> <strong> Thursday </strong></td>
                         <td>Breakfast: Matcha Yogurt with Red Bean</td>
                         <td>Lunch: Sushi Rolls (Cucumber & Tuna)</td>
                         <td>Dinner: Meal Prep Day – Leftover Nikujaga</td>
                         <td>Calories: 1,650</td>
                     </tr>
                     <tr>
-                        <td>Friday</td>
+                        <td> <strong> Friday </strong></td>
                         <td>Breakfast: Japanese Soufflé Pancakes</td>
                         <td>Lunch: Yakisoba</td>
                         <td>Dinner: Chicken Karaage with Steamed Rice</td>
@@ -162,24 +160,44 @@
             </table>
         </div>
 
-        <div class="video part">
+        <div class="video_part">
             <h1>Cooking tutorials</h1>
             <figure>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/r3_tcQiyGG8?si=sSYkc-oJJ7T_vDf0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>   
+            <iframe width="1600" height="600" src="https://www.youtube.com/embed/r3_tcQiyGG8?si=sSYkc-oJJ7T_vDf0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>   
             </iframe>
             <figcaption>a quick simple video as an intro to the way of ramen</figcaption>
         </figure>
         </div>
+    </div>
+    <aside>
+        <h1>Quick cooking tips</h1>
+        <hr style="border-color:#ff6200; margin: 30px;">
 
+        <ol>
+            <li><strong>read the full recipe</strong> before you start cooking</li>
+            <li><em>prep all ingredients</em>(mise en place) before turning on the stove</li>
+            <li>season as you go and taste frequently</li>
+            <li>let meat <strong>rest</strong> afetr cooking for jucier results</li>
+            <li>Use a <mark>sharp knife</mark>, it is safer and more efficient</li>
+        </ol>
+        <h2>useful resources</h2>
+        <ul>
+            <li><a rel="noopener noreferrer" target="_blank" href="https://www.fatafeat.com">all recipes</a></li>
+            <li><a rel="noopener noreferrer" target="_blank" href="https://www.fatafeat.com">BBC good Foods</a></li>
+            <li> <a href="mailto:ar2211579@qu.edu.qa">Email use a recipe</a></li>
+            <li><a href="tel:11223355">call us: +974 1122553366</a></li>
+        </ul>
+    </aside>
     </main>
 
 </body>
 
-<footer class="feet">
-    <strong>&copy all rights reserved to the <del>syrian japanese regime</del></strong>
-    <strong>built with chopsticks, wet noodles, and dua on the creator of javascript #piracy</strong>
-    <br>
+<footer>
+    <p><strong>&copy all rights reserved to the <del>syrian japanese regime</del></strong></p>
+    <p><strong>built with chopsticks, wet noodles, and dua on the creator of javascript #piracy</strong></p>
+    <nav>
     <a target="_blank" href="http://127.0.0.1:5500/assignments/Assignment%201-HTMl%20and%20CSS/recipevault/index.html">recipes</a>
     <a target="_blank" href="https://excalidraw.com">share recipe</a>
+    </nav>
 </footer>
 </html>

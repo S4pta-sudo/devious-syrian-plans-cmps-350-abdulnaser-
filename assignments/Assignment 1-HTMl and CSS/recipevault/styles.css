@@ -30,22 +30,458 @@
 
 /* ===== Reset & Base Styles ===== */
 /* TODO: Add box-sizing reset, body font, base img and link styles */
-header{
-   background-color:#e65100;
-   color: white;
-   margin: 0;
-   padding: 0;
-   line-height: 1;
-   align-items: center;
-   
+
+.head { /*head as awhole*/
+color: white;
+background-color:#e65100;
+display: flex;
+flex-wrap: wrap;
+flex-direction: row;
+justify-content: space-between;
+margin: 0; 
+align-items: center;
+
 }
 
-* {
+button{ /*head buttons */
+   border: transparent;
+   background-color:#e65100;
+   font-size: 20px;
+   padding: 15px;
+   margin: 5px;
+   font-size: 22px;
+}
+
+.head a{ /*the 2 buttons we have in the head*/
+   color: white;
+   text-decoration: none;
+}
+
+.head button:hover{ /*when the head buttons are gone*/
+   background-color:#ff6200 ;
+}
+
+* {/*unifying the text font*/
    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
-/* ===== Typography ===== */
-/* TODO: Style h1, h2, h3 headings */
+
+/*DONE WITH EVERYTHING RELATED TO THE HEADER*/
+
+
+/*sidebar*/
+
+
+
+
+aside{ /*the box of the sidebar itself*/
+   background-color: white;
+   border-radius: 3%;
+   box-shadow:#e65100;
+   width: 350px;
+   height: fit-content;
+   
+   padding: 5px;
+}
+aside h1{ /*giving the H1 its properties, hr is in html*/
+   color:#e65100;
+   text-decoration: none;
+   justify-content: center;
+   text-align: center;
+}
+
+aside h2{ /*h2 text*/
+   color:#e65100 ;
+}
+
+aside a{ /*dealing with the a elements*/
+   color:#e65100;
+   text-decoration: none;
+   justify-content: center;
+   text-align: center;
+}
+
+aside li{ /*the size of the list elements for ul and ol*/
+   font-size: 20px;
+   margin-bottom: 20px;
+   margin-top: 20px;
+}
+
+
+
+body{ /*bg color*/
+   background-color: #eee4db;
+}
+
+main{ /*the main grid that will handle all and be all*/
+   display: grid;
+   grid-template-columns: 3fr 1fr;
+   grid-template-rows: 1;
+   margin-left:150px;
+   margin-bottom:100px;
+   
+}
+
+.card_container{ /*the cards themselves are flex*/
+   display: flex;
+   flex-wrap: wrap;
+   column-gap: 1px;
+   
+   
+}
+article { /*each card item what to do with it*/
+   width: 500px;
+   height: 600px;
+   border: white;
+   border-radius: 3%;
+   justify-content:flex-start;
+   
+   
+}
+
+article img{ /*the images within each card*/
+   border-radius: 3%;
+   
+}
+
+article figcaption{ /*the figure caption*/
+   background-color: rgb(213, 206, 206);
+   height: 25px;
+   width: 400px;
+   
+}
+
+article h3{ /*the title of each dish*/
+   color:#e65100;
+   background-color: white;
+   padding-left:20px ;
+}
+
+article p{ /*le text per card*/
+   background-color: white;
+   padding-left: 20px;
+}
+article ul{ /*the lists per card, idk how to align them*/
+   display: flex;
+   list-style: none;
+   justify-content:space-evenly;
+   padding-right: 40px;
+   padding-bottom: 15px;
+
+   
+   
+}
+.card_bg{ /*bg color and some refinements for each card*/
+   background-color: white;
+   width: 400px;
+   box-shadow: #666666;
+   border-radius: 3%;
+   border-style: hidden;
+}
+
+.table h1{
+color:#e65100 ;
+}
+.table h3{
+color: #e65100;
+}
+
+.table thead{
+   background-color: #e65100;
+   color: white;
+}
+
+thead >tr{
+   border-radius: 10%;
+}
+
+ tfoot >tr{
+   background-color: #812900;
+   color: white;
+   border-radius: 10%;
+}
+
+table{
+   font-size: 22px;
+   border: none !important;
+   border-collapse: collapse;
+}
+
+tbody tr:nth-child(even){
+   background-color: rgb(223, 219, 219);
+}
+
+tbody tr:nth-child(odd){
+   background-color: white;
+}
+
+td,th,tr{
+   padding: 8px;
+   border: none;
+}
+
+
+/*---------------------------------- video/*/
+
+.video_part h1{
+   color: #e65100;
+}
+.video_part figcaption{
+   background-color: white;
+   padding: 15px;
+}
+
+
+footer {
+   position: sticky;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: rgb(77, 74, 74);
+   color: white;
+   text-align: center;
+   padding-top: 20px;
+   height: 6%;
+   font-size: 15px;
+ }
+
+ footer a{
+   text-decoration: none;
+   color: #e65100;
+   margin:20px ;
+ }
+ 
+
+
+ /*---------------------------PAGE 2*/
+ form{
+   border: hidden;
+   border-radius: 20px;
+   background-color:white;
+   padding: 20px;
+   width: 1250px;
+   height: fit-content;
+   margin-left: 160px;
+   font-size: 20px;
+   border-color: #e65100;
+
+ }
+
+ legend{
+   color:#e65100 ;
+ }
+
+ fieldset *{
+   margin: 10px 0px 15px 5px;
+ }
+
+ input[type=text], select, input[type=date], input[type=file]{
+   width: 100%;
+   display: inline-block;
+   box-sizing: border-box;
+   border-radius: 4px;
+   padding: 8px 0;
+   font-size: 20px;
+ }
+
+.number_input_container{
+   display: flex;
+   flex-wrap: wrap;
+}
+
+.number_input{
+   box-sizing: border-box;
+   flex: 1;
+   display: flex;
+}
+
+.number_input input{
+   width: 100%;
+}
+
+input[type=submit],input[type=reset]{
+   border: transparent;
+   background-color:#e65100;
+   font-size: 20px;
+   margin: 5px;
+   border-radius: 4px;
+   margin: 20px;
+   padding-left: 20px;
+   padding-right: 20px;
+   padding-bottom: 10px;
+   color: white;
+
+}
+
+input[type=submit]:hover,input[type=reset]:hover{
+background-color: #eed9c4;
+color: black;
+}
+
+textarea{
+   font-size: 20px;
+   border-radius: 4px;
+}
+
+
+
+
+
+/*MEDIA QUERIESSSSSSSSSSSS*/
+
+
+
+@media (max-width:767px){ /*PHONEEEEEEEE*/
+
+/* header stack */
+.head{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.head_buttons{
+    display:flex;
+    flex-direction: column;
+    width:100%;
+}
+
+.head_buttons button{
+    width:100%;
+}
+
+/* main layout */
+main{
+    grid-template-columns: 1fr;
+    margin-left:20px;
+    margin-right:20px;
+}
+
+/* cards */
+.card_container{
+    flex-direction: column;
+    align-items:center;
+}
+
+article{
+    width:100%;
+}
+
+.card_bg{
+    width:100%;
+}
+
+article figcaption{
+    width:100%;
+}
+
+article img{
+    width:100%;
+    height:auto;
+}
+
+/* sidebar below content */
+aside{
+    width:100%;
+    margin-top:40px;
+}
+
+/* table scroll */
+.table{
+    overflow-x:auto;
+}
+
+/* video responsive */
+.video_part iframe{
+    width:100%;
+    height:300px;
+}
+
+/* form */
+form{
+    width:100%;
+    margin-left:0;
+}
+   
+/* number inputs stacked */
+.number_input_container{
+    flex-direction:column;
+}
+
+}
+
+
+
+/*TABLETTTTTTTTT*/
+@media (min-width:768px) and (max-width:1023px){
+
+   /* header row */
+   .head{
+    flex-direction: row;
+}
+
+/* cards 2 per row */
+.card_container{
+    justify-content: center;
+}
+
+article{
+    width:45%;
+}
+
+/* sidebar below still */
+main{
+    grid-template-columns:1fr;
+}
+
+/* video */
+.video_part iframe{
+    width:100%;
+    height:450px;
+}
+
+/* form width */
+form{
+    width:90%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+/* number inputs side by side */
+.number_input_container{
+    flex-direction:row;
+    gap:20px;
+}
+
+}
+
+
+
+/*DESKTOP FOR GOOD MEASURE FIGHT ME*/
+@media (min-width:1024px){
+
+   main{
+       grid-template-columns:3fr 1fr;
+   }
+   
+   /* 3 cards layout */
+   .card_container{
+       justify-content:flex-start;
+   }
+   
+   article{
+       width:500px;
+   }
+   
+   }
+
+
+
+
+
+ /* ===== Typography ===== */
+
+ /* TODO: Style h1, h2, h3 headings */
 
 
 /* ===== Header ===== */
