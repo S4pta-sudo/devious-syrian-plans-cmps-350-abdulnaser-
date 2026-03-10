@@ -8,9 +8,9 @@ College of Engineering - Department of Computer Science and Engineering<br>
 
 # Assignment 1 - Testing & Grading Sheet
 
-**Student Name:** ____________________
-**Student ID:** ____________________
-**Date:** ____________________
+**Student Name:** sapota rabie
+**Student ID:** 202211579
+**Date:** DNE
 
 > **Instructions:** For each item below, take a screenshot and save it inside a `screenshots/` folder using the exact file name shown. The image will render automatically in this document. Resize your browser to the correct screen size before capturing.
 
