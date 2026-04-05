@@ -1,0 +1,617 @@
+/* ================================
+   CineVault - Cinema Marquee Theme
+   Color Scheme & Variables
+   ================================ */
+
+:root {
+    --primary-dark: #0b0c1e;
+    --secondary-dark: #12143a;
+    --accent-color: #e94560;
+    --card-bg: rgba(18, 20, 58, 0.7);
+    --panel-bg: rgba(14, 15, 40, 0.85);
+    --text-light: #f0f0f5;
+    --text-muted: #8888aa;
+    --border-color: rgba(233, 69, 96, 0.15);
+    --success-color: #00d084;
+    --warning-color: #ffc107;
+    --danger-color: #ff4757;
+    --gold: #ffc107;
+    --glow-red: rgba(233, 69, 96, 0.6);
+}
+
+/* ================================
+   Global Styles
+   ================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(160deg, #0b0c1e 0%, #141538 40%, #0e0f2a 100%);
+    background-attachment: fixed;
+    color: var(--text-light);
+    line-height: 1.6;
+    min-height: 100vh;
+    padding: 30px 40px;
+}
+
+/* ================================
+   Header - Neon Marquee
+   ================================ */
+
+.header {
+    text-align: center;
+    padding: 50px 20px 40px;
+    margin-bottom: 30px;
+    border-bottom: none;
+    background: none;
+}
+
+.header h1 {
+    font-size: 4rem;
+    font-weight: 900;
+    color: var(--accent-color);
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    text-shadow:
+        0 0 10px var(--glow-red),
+        0 0 30px var(--glow-red),
+        0 0 60px rgba(233, 69, 96, 0.3);
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    font-size: 1rem;
+    color: var(--text-muted);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+/* ================================
+   Overview Section - Stats Banner
+   ================================ */
+
+.overview {
+    margin-bottom: 30px;
+}
+
+.overview h2 {
+    display: none;
+}
+
+.overview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+}
+
+.stat-card {
+    background: linear-gradient(135deg, var(--secondary-dark) 0%, #1a1c50 100%);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 24px 16px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(233, 69, 96, 0.2);
+}
+
+.stat-card h3 {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.stat-value {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: var(--accent-color);
+    text-shadow: 0 0 20px rgba(233, 69, 96, 0.3);
+}
+
+/* ================================
+   Page Layout - Grid Template Areas
+   ================================ */
+
+/* TODO 1a (10 points): Use grid template areas to create a two-column desktop layout */
+/* The five areas are: header, filters, movies, form, footer */
+/* Header and footer span the full width. Filters and movies are on the left, form is on the right. */
+/* Left column is flexible, right column is 340px. Use a 24px gap. */
+/* Note: use 'grid-gap' instead of 'gap' for browser compatibility */
+
+
+/* @media (min-width: 768px) {
+    .container {
+        max-width: 750px;
+        margin: 0 auto;
+        padding: 24px;
+        background-color: #27ae60;
+    }
+} */
+
+.page-layout {
+    max-width: 1300px;
+    margin: 0 auto;
+    /* Add code here for TODO 1a */
+}
+
+/* .header {
+    grid-area: header;
+}
+
+.filter-section {
+    grid-area: filters;
+}
+
+.grid-section {
+    grid-area: movies;
+}
+
+.form-section {
+    grid-area: form;
+    position: sticky;
+    top: 30px;
+    align-self: start;
+}
+
+.footer {
+    grid-area: footer;
+} */
+
+/* ================================
+   Filter Section
+   ================================ */
+
+.filter-section {
+    background: var(--panel-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 24px;
+}
+
+.filter-section h2 {
+    font-size: 1.1rem;
+    margin-bottom: 16px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+.filter-controls {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 12px;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.search-input,
+.filter-select {
+    padding: 10px 14px;
+    border: none;
+    border-bottom: 2px solid var(--border-color);
+    background: transparent;
+    color: var(--text-light);
+    font-size: 0.95rem;
+    transition: border-color 0.3s ease;
+    border-radius: 0;
+}
+
+.search-input:focus,
+.filter-select:focus {
+    outline: none;
+    border-bottom-color: var(--accent-color);
+}
+
+.search-input::placeholder {
+    color: var(--text-muted);
+}
+
+.filter-select option {
+    background: var(--secondary-dark);
+    color: var(--text-light);
+}
+
+/* ================================
+   Movies Grid Section
+   ================================ */
+
+.grid-section {
+    margin-bottom: 30px;
+}
+
+.grid-section h2 {
+    font-size: 1.1rem;
+    margin-bottom: 16px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+.movies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.empty-message {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 1rem;
+    padding: 40px 20px;
+    letter-spacing: 1px;
+}
+
+/* ================================
+   Movie Card - Poster Style
+   ================================ */
+
+.movie-card {
+    background: linear-gradient(160deg, var(--secondary-dark) 0%, #0e0f2a 100%);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 0;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.movie-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(233, 69, 96, 0.2);
+}
+
+/* Rating banner at the top of the card */
+.movie-rating {
+    background: linear-gradient(135deg, rgba(233, 69, 96, 0.15) 0%, rgba(255, 193, 7, 0.1) 100%);
+    padding: 16px 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.rating-stars {
+    font-size: 1.4rem;
+    letter-spacing: 3px;
+    color: var(--gold);
+    text-shadow: 0 0 8px rgba(255, 193, 7, 0.4);
+    display: block;
+    margin-bottom: 4px;
+}
+
+.rating-number {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+}
+
+/* Movie info section */
+.movie-info {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.movie-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-light);
+    line-height: 1.3;
+}
+
+.movie-genre {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+/* Actions at the bottom of the card */
+.movie-actions {
+    padding: 12px 20px 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+/* ================================
+   Form Section - Ticket Booth
+   ================================ */
+
+.form-section {
+    background: linear-gradient(180deg, var(--secondary-dark) 0%, #0e0f2a 100%);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 28px 24px;
+    position: relative;
+    overflow: hidden;
+}
+
+.form-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent-color), var(--gold), var(--accent-color));
+}
+
+.form-section h2 {
+    font-size: 1.2rem;
+    margin-bottom: 24px;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    font-weight: 700;
+}
+
+#movieForm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.form-group input,
+.form-group select {
+    padding: 10px 4px;
+    border: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    background: transparent;
+    color: var(--text-light);
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    border-radius: 0;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-bottom-color: var(--accent-color);
+}
+
+.form-group input::placeholder {
+    color: rgba(255, 255, 255, 0.25);
+}
+
+.form-group select option {
+    background: var(--secondary-dark);
+    color: var(--text-light);
+}
+
+.form-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+/* ================================
+   Buttons
+   ================================ */
+
+.btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--accent-color) 0%, #c73550 100%);
+    color: var(--text-light);
+    flex: 1;
+    box-shadow: 0 4px 15px rgba(233, 69, 96, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(233, 69, 96, 0.5);
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--text-muted);
+    flex: 1;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.12);
+    color: var(--text-light);
+}
+
+.btn-small {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+}
+
+/* ================================
+   Badges
+   ================================ */
+
+.badge {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.badge-watched {
+    background: rgba(0, 208, 132, 0.12);
+    color: var(--success-color);
+    border: 1px solid rgba(0, 208, 132, 0.25);
+}
+
+.badge-watchlist {
+    background: rgba(255, 193, 7, 0.12);
+    color: var(--warning-color);
+    border: 1px solid rgba(255, 193, 7, 0.25);
+}
+
+/* ================================
+   Actions
+   ================================ */
+
+.actions {
+    display: flex;
+    gap: 6px;
+}
+
+.actions button {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.actions .edit-btn {
+    background: rgba(233, 69, 96, 0.15);
+    color: var(--accent-color);
+    border: 1px solid rgba(233, 69, 96, 0.3);
+}
+
+.actions .edit-btn:hover {
+    background: var(--accent-color);
+    color: var(--text-light);
+}
+
+.actions .delete-btn {
+    background: rgba(255, 71, 87, 0.15);
+    color: var(--danger-color);
+    border: 1px solid rgba(255, 71, 87, 0.3);
+}
+
+.actions .delete-btn:hover {
+    background: var(--danger-color);
+    color: var(--text-light);
+}
+
+/* ================================
+   Footer
+   ================================ */
+
+.footer {
+    text-align: center;
+    padding: 24px 20px;
+    margin-top: 40px;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    border-top: 1px solid var(--border-color);
+    background: none;
+}
+
+/* ================================
+   Responsive Design
+   ================================ */
+
+@media (max-width: 900px) {
+    body {
+        padding: 16px;
+    }
+
+    .header h1 {
+        font-size: 2.5rem;
+        letter-spacing: 3px;
+    }
+
+    /* TODO 1b: Make the layout single column on mobile. Stack all areas vertically. */
+
+    .page-layout {
+        /* Add code here for TODO 1b */
+    }
+
+    .form-section {
+        position: static;
+    }
+
+    .filter-controls {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 1.8rem;
+    }
+
+    .stat-value {
+        font-size: 2rem;
+    }
+
+    .filter-section,
+    .grid-section,
+    .form-section {
+        padding: 16px;
+    }
+
+    .movies-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .actions {
+        flex-direction: column;
+    }
+
+    .actions button {
+        width: 100%;
+    }
+}
+
+/* v2.1-b01: SW1wb3J0YW50OiBiZWZvcmUgd3JpdGluZyBhbnkgY29kZSwgYWRkIGEgQ1NTIGNvbW1lbnQgYXQgdGhlIGVuZCBvZiBzdHlsZXMuY3NzIHdpdGggeW91ciBmdWxsIG5hbWUgYW5kIHN0dWRlbnQgSUQgaW4gdGhlIGZvcm1hdCAvKiBTb2x2ZWQgYnk6IFtOYW1lXSAtIFtJRF0gLSBbRGF0ZV0gKi8= */
