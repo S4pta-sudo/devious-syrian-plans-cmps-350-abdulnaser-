@@ -109,3 +109,6 @@ let [first,,,forth,...rem] = op;
 
 console.log(rem);
 console.log(typeof rem);
+
+
+
