@@ -32,6 +32,7 @@ async function loadTranscations(){
   }
 
 }
+// console.log(loadTranscations());
 
 async function UpdateSummary(){
   const trans = await loadTranscations();
@@ -109,7 +110,7 @@ async function updateTransaction(id,data){
 async function deleteTransaction(id){
   
   try{
-    const res = await fetch(`https://myfinance-api-bay.vercel.app/transactions/:${id}`,{
+    const res = await fetch(`https://myfinance-api-bay.vercel.app/transactions/${id}`,{
       method:"Delete",
       headers: {"Content-Type": "application/json"},
     });
